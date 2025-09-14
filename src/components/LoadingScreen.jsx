@@ -15,7 +15,7 @@ const BlinkingCursor = styled('span')({
 
 export default function LoadingScreen({ onComplete }) {
   const [text, setText] = useState('')
-  const fullText = "<Hello World/>"
+  const fullText = "Welcome to my Portfolio"
 
   useEffect(() => {
     let currentIndex = 0
@@ -50,6 +50,7 @@ export default function LoadingScreen({ onComplete }) {
         variant="h3"
         component="div"
         fontFamily="monospace"
+        color='black'
         fontWeight={700}
         sx={{ mb: 4, letterSpacing: 2 }}
       >

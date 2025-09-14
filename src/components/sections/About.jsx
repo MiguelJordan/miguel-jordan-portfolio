@@ -42,7 +42,7 @@ export default function About() {
     <SectionTemplate
       id='about'
       title="À propos de moi"
-      icon={<PersonIcon fontSize="inherit" />}
+      icon={""}
     >
       <Typography variant="body1" color="grey.200" align="center" sx={{ mb: 4 }}>
         Futur ingénieur logiciel recherchant <Box component="span" fontWeight={700} color="primary.main"> un contrat d’alternance de 24 mois </Box> ou un stage de <Box component="span" fontWeight={700} color="primary.main"> 2 mois minimum dès le 11 mai 2026 </Box> 

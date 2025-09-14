@@ -1,6 +1,4 @@
-import React from 'react'
 import SectionTemplate from '../SectionTemplate'
-import PersonIcon from '@mui/icons-material/Person'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
@@ -11,7 +9,7 @@ export default function Home() {
     <SectionTemplate
       id='home'
       title="Bienvenue, je suis Miguel Jordan"
-      icon={<PersonIcon fontSize="inherit" />}
+      icon={""}
       gradient="linear-gradient(135deg, #1e3c72 0%, #6a3093 100%)"
     >
       <Box textAlign="center">
