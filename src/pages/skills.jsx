@@ -23,7 +23,7 @@ export default function Skills(){
 
   return (
     <div className="skills-page">
-      <h1>Mes Compétences Techniques / Langages de programmation</h1>
+      <h1>Mes Compétences Techniques </h1>
       <div className="skills-grid">
         {languages.map((skill, index) => (
           <div className="skill-card" key={index}>

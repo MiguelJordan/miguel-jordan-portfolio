@@ -6,7 +6,7 @@ const education = [
     school: "Université de Rennes",
     degree: "Master Ingénierie Logicielle",
     period: "2025 - 2027",
-    description: "Conception OO, projets agile, architecture fullStack (SpringBoot/Angular/React/Vue), cloud, Kubernetes."
+    description: "Conception OO, projets agile, architecture fullStack (SpringBoot / Angular / React/Vue), cloud, Kubernetes."
   },
   {
     school: "Université de Caen Normandie",

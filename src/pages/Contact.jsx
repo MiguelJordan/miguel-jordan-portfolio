@@ -38,7 +38,7 @@ export default function Contact() {
   return (
     <SectionTemplate
       id='contact'
-      title="Contactez-moi"
+      title="Contact"
       icon={!isMobile && <EmailIcon fontSize="inherit" />}
       gradient="linear-gradient(135deg, #6a3093 0%, #1e3c72 100%)"
     >
@@ -66,6 +66,8 @@ export default function Contact() {
                 bgcolor: 'purple.600',
                 color: 'white',
                 boxShadow: 2,
+                width: 'fit-content',
+                wordBreak:'break-word',
                 '&:hover': { bgcolor: 'purple.700' }
               }}
             >
