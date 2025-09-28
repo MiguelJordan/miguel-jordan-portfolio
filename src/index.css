@@ -9,13 +9,21 @@ html, body {
   color: #f3f4f6;
 }
 
+.ham-menu{
+  width: 10px;
+  height: 32px;
+  font-size: x-large;
+}
+
 
 /* Skills page*/
 .skills-page {
-  padding: 40px;
+  padding: 40px 20px;
   text-align: center;
   background-color: #f8fafc;
   min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .skills-page h1 {
@@ -26,11 +34,13 @@ html, body {
 }
 
 .skills-grid {
-  display: grid;
+ display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 24px;
   justify-items: center;
-  align-items: center;
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto;
 }
 
 .skill-card {
@@ -58,6 +68,21 @@ html, body {
   height: 60px;
   object-fit: contain;
   margin-bottom: 12px;
+}
+
+@media (max-width: 480px) {
+  .skills-page {
+    padding: 20px 10px; /* padding plus petit sur mobile */
+  }
+
+  .skills-grid {
+    gap: 16px; /* espace réduit entre les cartes */
+  }
+
+  .skill-card {
+    width: 100%; /* chaque carte prend toute la largeur disponible */
+    max-width: 200px; /* limite la taille pour ne pas être trop large */
+  }
 }
 
 

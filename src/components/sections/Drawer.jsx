@@ -19,7 +19,7 @@ export default function Drawer() {
         <div className="drawer-header"> Miguel<span className='text-blue-500'>.tech</span></div>
 
         {isMobile ? 
-        <div className='w-7 h-5 mr-10 relative cursor-pointer z-40 md:hidden' onClick={()=> toggleMenu()}>
+        <div className='w-5 h-5 mr-8 relative cursor-pointer z-40 md:hidden ham-menu' onClick={()=> toggleMenu()}>
                 &#9776;
              </div>
 
