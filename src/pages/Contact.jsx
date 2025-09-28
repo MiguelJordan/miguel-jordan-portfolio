@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 import emailjs from 'emailjs-com'
 
-import SectionTemplate from '../SectionTemplate'
+import SectionTemplate from '../components/SectionTemplate'
 import EmailIcon from '@mui/icons-material/Email'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
@@ -11,10 +11,13 @@ import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
+import { LayoutContext } from '../contexts/LayoutContext'
 
 
 
 export default function Contact() {
+
+    const {isMobile} = useContext(LayoutContext)
 
     const [formStatus, setFormStatus] = useState(
         {name:"",email:"",message:""}
@@ -36,7 +39,7 @@ export default function Contact() {
     <SectionTemplate
       id='contact'
       title="Contactez-moi"
-      icon={<EmailIcon fontSize="inherit" />}
+      icon={!isMobile && <EmailIcon fontSize="inherit" />}
       gradient="linear-gradient(135deg, #6a3093 0%, #1e3c72 100%)"
     >
       <Box textAlign="center">

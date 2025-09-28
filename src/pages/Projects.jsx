@@ -1,5 +1,5 @@
-import React from 'react'
-import SectionTemplate from '../SectionTemplate'
+import React, { useContext } from 'react'
+import SectionTemplate from '../components/SectionTemplate'
 import FolderOpenIcon from '@mui/icons-material/FolderOpen'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LaunchIcon from '@mui/icons-material/Launch'
@@ -8,6 +8,7 @@ import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
+import { LayoutContext } from '../contexts/LayoutContext'
 
 const projects = [
   {
@@ -47,11 +48,14 @@ const projects = [
 ]
 
 export default function Projects() {
+
+  const {isMobile} = useContext(LayoutContext)
+
   return (
     <SectionTemplate
       id='projects'
       title="Mes projets"
-      icon={<FolderOpenIcon fontSize="inherit" />}
+      icon={!isMobile && <FolderOpenIcon fontSize="inherit" />}
       gradient="linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #6a3093 100%)"
     >
       <Grid container spacing={4}>

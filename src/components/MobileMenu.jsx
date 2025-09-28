@@ -1,20 +1,28 @@
-import React, { useEffect } from 'react'
+/* eslint-disable no-unused-vars */
+import React, { useContext, useEffect } from 'react'
 import Box from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
+import { LayoutContext } from '../contexts/LayoutContext'
+import { Link } from 'react-router-dom'
 
-export default function MobileMenu({ menuOpen, setMenuOpen }) {
+export default function MobileMenu() {
+
+  const {menuOpen, toggleMenu} = useContext(LayoutContext)
+
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
   }, [menuOpen])
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Accueil', href: '/' },
+    { label: 'Compétences', href: '/skills' },
+    { label: 'Education & Experiences', href: '/education&experiences' },
+    { label: 'Projets', href: '/projects' },
+    { label: 'Contact', href: '/contact' },
+    
   ]
 
   return (
@@ -37,7 +45,7 @@ export default function MobileMenu({ menuOpen, setMenuOpen }) {
       }}
     >
       <IconButton
-        onClick={() => setMenuOpen(false)}
+        onClick={() => toggleMenu()}
         sx={{
           position: 'absolute',
           top: 24,
@@ -51,10 +59,10 @@ export default function MobileMenu({ menuOpen, setMenuOpen }) {
       </IconButton>
       <Stack spacing={3} alignItems="center">
         {navLinks.map((link, idx) => (
-          <Button
+          <Link
             key={link.label}
-            href={link.href}
-            onClick={() => setMenuOpen(false)}
+            to={link.href}
+            onClick={() => toggleMenu()}
             sx={{
               fontSize: '2rem',
               fontWeight: 600,
@@ -74,7 +82,7 @@ export default function MobileMenu({ menuOpen, setMenuOpen }) {
             }}
           >
             {link.label}
-          </Button>
+          </Link>
         ))}
       </Stack>
     </Box>
