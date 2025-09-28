@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=/" />
+  </head>
+  <body>
+    <p>Redirecting...</p>
+    <script>
+      // Redirection plus robuste (préserve le chemin)
+      var pathname = window.location.pathname;
+      window.location.replace("/" + pathname);
+    </script>
+  </body>
+</html>
